@@ -1,0 +1,11 @@
+<h1>Guest Log Out</h1>
+
+<form action="/Guest" method="POST">
+    <input type="text" name="name" placeholder="Guest Name" value="{{singleGuest.name}}">
+    <input type="text" name="location" placeholder="Company Name" value="{{singleGuest.location}}">
+    <input type="datetime-local" name="logIn" placeholder="Time In" value="{{singleGuest.signIn}}">
+    <input type="datetime-local" name="logOut" placeholder="Time Out" >
+    <input type="text" name="reasonForVisit" placeholder="Reason For Visit" value="{{singleGuest.reasonForVisit}}">
+
+    <input type="submit" value="Submit">
+</form>

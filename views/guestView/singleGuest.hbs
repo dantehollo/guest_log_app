@@ -1,0 +1,22 @@
+<h1>{{singleGuest.name}}</h1>
+
+<p>Visited: {{singleGuest.location}}</p>
+<p>For:  {{singleGuest.reasonForVisit}}</p>
+<p>Arrived at: {{singleGuest.signIn}}</p>
+<p>Left at: {{singleGuest.signIn}}</p>
+
+<a href="/company/edit/{{singleGuest._id}}">
+    <button>
+        Update
+    </button>
+</a>
+
+<form action="/company/{{singleGuest._id}}?_method=DELETE" method="POST">
+    <input type="submit" value="Remove Visit">
+</form>
+
+<a href="/guest">
+    <button>
+        Home
+    </button>
+</a>
