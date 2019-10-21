@@ -5,7 +5,7 @@ const companyApi = require('../models/company.js')
 const companyRouter = express.Router()
 
 // new
-companyRouter.post('/company/new', (req, res) => {
+companyRouter.get('/company/new', (req, res) => {
     res.render('companyView/createCompanyForm')
 })
 
@@ -13,6 +13,18 @@ companyRouter.post('/company/new', (req, res) => {
 companyRouter.get('/company', (req, res) => {
     companyApi.getAllCompany()
         .then((allCompany) => {
-            res.render('company/allCompany', {allCompany})
+            res.render('companyView/allCompany', {allCompany})
         })
 })
+
+// create
+companyRouter.post('/company', (req, res) => {
+    companyApi.createCompany(req.body)
+        .then((createdCompany) => {
+            res.redirect("/company")
+        })
+})
+
+module.exports = {
+    companyRouter
+}

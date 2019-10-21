@@ -1,15 +1,13 @@
 <h1>Companies Using Our Service</h1>
 
-{{!-- new company button --}}
 <a href="/company/new">
     <button>
         New Company
     </button>
 </a>
 
-{{!-- list of companies --}}
 {{#each allCompany}}
-    <a href="/company/{{id}}">
+    <a href="/company/{{_id}}">
         <p>Business Name: {{id}}</p>
     </a>
 {{/each}}
