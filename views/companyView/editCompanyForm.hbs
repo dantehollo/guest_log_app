@@ -1,0 +1,9 @@
+<h1>{{singleCompany.name}}</h1>
+
+<form action="/company/{{singleCompany._id}}?_method=PUT" method="POST">
+    <input type="text" name="name"  placeholder="Company Name" value="{{singleCompany.name}}">
+    <input type="text" name="location" placeholder="Address" value="{{singleCompany.location}}">
+    <input type="text" name="subscriptionStatus" placeholder="Currently Subscribed" value="{{singleCompany.subscriptionStatus}}">
+
+    <input type="submit" value="Update">
+</form>

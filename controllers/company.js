@@ -17,6 +17,14 @@ companyRouter.get('/company', (req, res) => {
         })
 })
 
+// get one
+companyRouter.get('/company/:id', (req, res) => {
+    companyApi.getOneCompany(req.params.id)
+        .then((singleCompany) => {
+            res.render('companyView/singleCompany', {singleCompany})
+        })
+}) 
+
 // create
 companyRouter.post('/company', (req, res) => {
     companyApi.createCompany(req.body)
@@ -24,6 +32,10 @@ companyRouter.post('/company', (req, res) => {
             res.redirect("/company")
         })
 })
+
+// update
+
+// edit
 
 module.exports = {
     companyRouter
