@@ -9,6 +9,14 @@ companyRouter.get('/company/new', (req, res) => {
     res.render('companyView/createCompanyForm')
 })
 
+// edit
+companyRouter.get('/company/edit/:id', (req, res) => {
+    companyApi.getOneCompany(req.params.id)
+        .then((singleCompany) => {
+            res.render('companyView/editCompanyForm', {singleCompany})
+        })
+})
+
 // get all
 companyRouter.get('/company', (req, res) => {
     companyApi.getAllCompany()
@@ -34,9 +42,22 @@ companyRouter.post('/company', (req, res) => {
 })
 
 // update
+companyRouter.put('/company/:id', (req, res) => {
+    companyApi.updateCompany(req.params.id, req.body)
+        .then((updatedCompany) => {
+            res.redirect(`/company/${req.params.id}`)
+        })
+})
 
-// edit
+// delete
+companyRouter.delete('/company/:id', (req, res) => {
+    companyApi.deleteCompany(req.params.id)
+        .then((deletedCompany) => {
+            res.redirect('/company')
+        })
+})
 
+// export
 module.exports = {
     companyRouter
 }
