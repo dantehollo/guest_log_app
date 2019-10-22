@@ -10,7 +10,7 @@ const GuestSchema = new mongoose.Schema({
 })
 
 // collection
-const GuestCollection = mongoose.model('Guest', GuestCollection)
+const GuestCollection = mongoose.model('Guest', GuestSchema)
 
 // get all
 const getAllGuest = () => {

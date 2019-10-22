@@ -2,8 +2,10 @@ const mongoose = require('./connection.js')
 
 // Schema
 const VendorSchema = new mongoose.Schema({
-    name: String,
-    location: String,
+    vendorName: String,
+    vendorLocation: String,
+    visitingCompany: String,
+    phoneNumber: String,
     service: String
 })
 

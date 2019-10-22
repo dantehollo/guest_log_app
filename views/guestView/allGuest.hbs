@@ -2,12 +2,12 @@
 
 <a href="/guest/new">
     <button>
-        New Company
+        Guest Sign In
     </button>
 </a>
 
 {{#each allGuest}}
     <a href="/guest/{{_id}}">
-        <p>Guest: {{singleGuest.name}}</p>
+        <p>Guest: {{name}}</p>
     </a>
 {{/each}}
