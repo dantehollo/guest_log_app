@@ -3,9 +3,8 @@ const mongoose = require('./connection.js')
 // Schema
 const VendorSchema = new mongoose.Schema({
     vendorName: String,
-    vendorLocation: String,
-    visitingCompany: String,
-    phoneNumber: String,
+    vendorAddress: String,
+    vendorPhoneNumber: String,
     service: String
 })
 
@@ -29,12 +28,12 @@ const createVendor = (vendorData) => {
 
 // update
 const updateVendor = (id, vendorData) => {
-    return VendorCollection.create({_id: id}, vendorData)
+    return VendorCollection.updateOne({_id: id}, vendorData)
 }
 
 // delete
 const deleteVendor = (id) => {
-    return VendorCollection.delete({_id: id})
+    return VendorCollection.deleteOne({_id: id})
 }
 
 // export

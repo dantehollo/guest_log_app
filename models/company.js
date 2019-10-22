@@ -2,9 +2,11 @@ const mongoose = require('./connection.js')
 
 // Company Schema
 const CompanySchema = mongoose.Schema({
-    name: String,
-    location: String,
-    subscriptionStatus: Boolean
+    companyName: String,
+    companyAddress: String,
+    companyPhoneNumber: String,
+    registeredVendors: String,
+    guestLog: String
 })
 
 // collection

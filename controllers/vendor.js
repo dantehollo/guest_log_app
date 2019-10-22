@@ -43,8 +43,8 @@ vendorRouter.post('/vendor', (req, res) => {
 
 // update
 vendorRouter.put('/vendor/:id', (req, res) => {
-    vendorApi.updatevendor(req.params.id, req.body)
-        .then((updatedvendor) => {
+    vendorApi.updateVendor(req.params.id, req.body)
+        .then((updatedVendor) => {
             res.redirect(`/vendor/${req.params.id}`)
         })
 })

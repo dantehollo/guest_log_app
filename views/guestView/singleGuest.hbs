@@ -1,9 +1,14 @@
-<h1>{{singleGuest.name}}</h1>
+<h1>{{singleGuest.guestName}}</h1>
 
-<p>Visited: {{singleGuest.location}}</p>
-<p>For:  {{singleGuest.reasonForVisit}}</p>
+<a href="../company">
+    <p>Home</p>
+</a>
+
+<p>Phone Number: {{singleGuest.guestPhoneNumber}}</p>
+<p><!--company the guest visited--></p>
 <p>Arrived at: {{singleGuest.signIn}}</p>
 <p>Left at: {{singleGuest.signOut}}</p>
+<p>For given: {{singleGuest.reasonForVisit}}</p>
 
 <a href="/guest/edit/{{singleGuest._id}}">
     <button>
@@ -17,6 +22,6 @@
 
 <a href="/guest">
     <button>
-        Home
+        Guest Log
     </button>
 </a>

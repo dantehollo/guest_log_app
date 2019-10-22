@@ -2,11 +2,12 @@ const mongoose = require('./connection.js')
 
 // Schema
 const GuestSchema = new mongoose.Schema({
-    name: String,
-    location: String,
+    guestName: String,
+    guestPhoneNumber: String,
+    reasonForVisit: String,
+    companyVisited: String,
     signIn: String,
-    signOut: String,
-    reasonForVisit: String
+    signOut: String
 })
 
 // collection
