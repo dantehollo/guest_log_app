@@ -1,0 +1,28 @@
+<h1>{{singleVendor.name}}</h1>
+
+<p>Address: {{singleVendor.vendorLocation}}</p>
+<p>Phone Number: {{singleVendor.phoneNumber}}</p>
+<p>Servicing: {{singleVendor.visitingCompany}}</p>
+<p>Service Provided: {{singleVendor.service}}</p>
+
+<a href="/guest/edit/{{singleVendor._id}}">
+    <button>
+        Update
+    </button>
+</a>
+
+<form action="/guest/{{singleVendor._id}}?_method=DELETE" method="POST">
+    <input type="submit" value="Remove Visit">
+</form>
+
+<a href="/guest">
+    <button>
+        Home
+    </button>
+</a>
+
+    vendorName: String,
+    vendorLocation: String,
+    visitingCompany: String,
+    phoneNumber: String,
+    service: String

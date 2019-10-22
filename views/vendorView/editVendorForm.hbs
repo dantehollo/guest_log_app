@@ -1,5 +1,11 @@
-    vendorName: String,
-    vendorLocation: String,
-    visitingCompany: String,
-    phoneNumber: String,
-    service: String
+<h1>{{singleVendor.name}}</h1>
+
+<form action="/vendor" method="POST">
+    <input type="text" name="name" placeholder="Vendor" value="{{singleVendor.name}}">
+    <input type="text" name="vendorLocation" placeholder="Address" value="{{singleVendor.vendorLocation}}">
+    <input type="text" name="visitingCompany" placeholder="Visiting" value="{{singleVendor.visitingCompany}}">
+    <input type="text" name="phoneNumber" placeholder="Phone Number" value="{{singleVendor.phoneNumber}}">
+    <input type="text" name="service" placeholder="Service" value="{{singleVendor.service}}">
+
+    <input type="submit" value="Submit">
+</form>
