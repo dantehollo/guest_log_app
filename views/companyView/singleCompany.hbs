@@ -15,10 +15,13 @@
         Update
     </button>
 </a>
-    
-    {{!--Make links to guest log and registered vendors 
-    registeredVendors: String,
-    guestLog: String --}}
+<a href="../vendor/vendorList">
+    <p>Registered Vendors</p>
+</a>
+<a href="../guest/guestLog">
+    <p>Guest List</p>
+</a>
+
 
 <form action="/company/{{singleCompany._id}}?_method=DELETE" method="POST">
     <input type="submit" value="Remove Company">
