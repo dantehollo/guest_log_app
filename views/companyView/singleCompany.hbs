@@ -1,11 +1,5 @@
 <h1>{{singleCompany.companyName}}</h1>
 
-<a href="/company">
-    <button>
-        Home
-    </button>
-</a>
-
 <p>{{singleCompany.companyAddress}}</p>
 <p>{{singleCompany.companyPhoneNumber}}</p>
 <p>{{singleCompany._id}}</p>
@@ -14,9 +8,6 @@
     <button>
         Update
     </button>
-</a>
-<a href="../vendor/vendorList">
-    <p>Registered Vendors</p>
 </a>
 <a href="../guest/guestLog">
     <p>Guest List</p>
@@ -27,3 +18,11 @@
     <input type="submit" value="Remove Company">
 </form>
 
+<h2>Registered Vendors</h2>
+
+{{#each companyVendor}}
+    <h3>{{vendorName}}</h3>
+    <p>{{vendorAddress}}</p>
+    <p>{{vendorPhoneNumber}}</p>
+    <p>{{service}}</p>
+{{/each}}

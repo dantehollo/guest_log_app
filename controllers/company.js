@@ -1,6 +1,7 @@
 const express = require('express')
 
 const companyApi = require('../models/company.js')
+const vendorApi = require('../models/vendor.js')
 
 const companyRouter = express.Router()
 
@@ -29,7 +30,11 @@ companyRouter.get('/company', (req, res) => {
 companyRouter.get('/company/:id', (req, res) => {
     companyApi.getOneCompany(req.params.id)
         .then((singleCompany) => {
-            res.render('companyView/singleCompany', {singleCompany})
+
+            vendorApi.getAllVendorByCompanyId(req.params.id)
+                .then((companyVendor) => {
+                    res.render('companyView/singleCompany', {singleCompany, companyVendor})                    
+                })
         })
 }) 
 

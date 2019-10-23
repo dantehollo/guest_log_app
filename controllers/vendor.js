@@ -9,6 +9,11 @@ vendorRouter.get('/vendor/new', (req, res) => {
     res.render('vendorView/createVendorForm')
 })
 
+// get vendor by company id
+vendorRouter.get('/vendor/new/:companyId', (req, res) => {
+    res.render('vendor/createVendorForm', {companyId: req.params.companyId})
+})
+
 // edit
 vendorRouter.get('/vendor/edit/:id', (req, res) => {
     vendorApi.getOneVendor(req.params.id)

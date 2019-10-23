@@ -5,7 +5,8 @@ const VendorSchema = new mongoose.Schema({
     vendorName: String,
     vendorAddress: String,
     vendorPhoneNumber: String,
-    service: String
+    service: String,
+    companyId: mongoose.ObjectId
 })
 
 // collection
@@ -14,6 +15,11 @@ const VendorCollection = mongoose.model('Vendor', VendorSchema)
 // get all
 const getAllVendor = () => {
     return VendorCollection.find({})
+}
+
+// get all vendors by company id
+const getAllVendorByCompanyId = (companyId) => {
+    return VendorCollection.find({companyId: companyId})
 }
 
 // get one
@@ -39,6 +45,7 @@ const deleteVendor = (id) => {
 // export
 module.exports = {
     getAllVendor,
+    getAllVendorByCompanyId,
     getOneVendor,
     createVendor,
     updateVendor,
