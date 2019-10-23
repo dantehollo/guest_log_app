@@ -1,28 +1,17 @@
-
-<nav>
-    <div>
-        <img class="logo" src="https://i.imgur.com/yJU8Zr9.jpg">
-    </div>
-    <div>
-        <a href="/vendor">
-            <p>Vendors</p>
-        </a>
-        <a href="/guest">
-            <p>Guest Log</p>
-        </a>
-    </div>
-</nav>
-
 <h1 class="heading">Companies We Serve</h1>
+
+<div class="container">
+    {{#each allCompany}}
+        <div class="box">
+            <a href="/company/{{_id}}">
+                <p>{{companyName}}</p>
+            </a>
+        </div>
+    {{/each}}
+</div>
 
 <a href="/company/new">
     <button>
         New Company
     </button>
 </a>
-
-{{#each allCompany}}
-    <a href="/company/{{_id}}">
-        <p>Business Name: {{companyName}}</p>
-    </a>
-{{/each}}

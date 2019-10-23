@@ -6,8 +6,8 @@ html {
 
 nav {
     background-color: rgb(185, 7, 7);
-    display: flex;
-    justify-content: space-between;
+    position: relative;
+    height: 100px;
 }
 
 a:link {
@@ -15,10 +15,28 @@ a:link {
     color: black;
 }
 
+.header-wrapper{
+    width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-button-holder {
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-buttons {
+    height: 75px;
+    margin: 30px 5px; 
+    display: flex;
+    align-content: center;
+}
+
 .wrapper {
     width: 1000px;
     margin: 0 auto;
-
 }
 
 .heading {
@@ -26,6 +44,20 @@ a:link {
 }
 
 .logo {
-    width: 100px;
-    height: auto;
+    width: auto;
+    height: 100px;
+}
+
+.box {
+    width: 25%;
+    height: 200px;
+    border: 1px solid black; 
+    border-radius: 5px;
+    margin: 20px 10px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
 }
