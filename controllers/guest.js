@@ -42,10 +42,6 @@ guestRouter.get('/guest/:id', (req, res) => {
 guestRouter.post('/guest', (req, res) => {
     guestApi.createGuest(req.body)
         .then((createdGuest) => {
-            let time = guest.signIn
-            let timeToString = time.toString()
-            let newTime = moment(timeToString).format('llll')
-            guest.signIn = newTime
             res.redirect("/guest")
         })
 })
@@ -70,3 +66,8 @@ guestRouter.delete('/guest/:id', (req, res) => {
 module.exports = {
     guestRouter
 }
+
+// let time = guest.signIn
+// let timeToString = time.toString()
+// let newTime = moment(timeToString).format('llll')
+// guest.signIn = newTime
