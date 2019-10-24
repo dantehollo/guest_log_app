@@ -8,6 +8,10 @@ const guestRouter = express.Router()
 guestRouter.get('/guest/new', (req, res) => {
     res.render('guestView/createGuestForm')
 })
+// get guest by company id
+guestRouter.get('/guest/new/:companyId', (req, res) => {
+    res.render('vendor/createVendorForm', {companyId: req.params.companyId})
+})
 
 // edit
 guestRouter.get('/guest/edit/:id', (req, res) => {

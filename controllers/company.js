@@ -2,6 +2,7 @@ const express = require('express')
 
 const companyApi = require('../models/company.js')
 const vendorApi = require('../models/vendor.js')
+const guestApi = require('../models/guest.js')
 
 const companyRouter = express.Router()
 
@@ -28,15 +29,26 @@ companyRouter.get('/company', (req, res) => {
 
 // get one
 companyRouter.get('/company/:id', (req, res) => {
+    // const simgleCompany = await companyApi.getOneCompany(req.params.id)
+    // const companyVendors = await vendorApi.getAllVendorByCompanyId(req.params.id)
+    // const companyGuests = await guestApi.getAllGuestByCompanyId(req.params.id)
     companyApi.getOneCompany(req.params.id)
         .then((singleCompany) => {
 
             vendorApi.getAllVendorByCompanyId(req.params.id)
                 .then((companyVendor) => {
-                    res.render('companyView/singleCompany', {singleCompany, companyVendor})                    
+                    res.render('companyView/singleCompany', {singleCompany, companyVendor})
                 })
         })
-}) 
+})
+
+// load guests onto guestLog
+companyRouter.get('/comapany/:id/guestLog', (req, res) => {
+    guestApi.getAllGuestByCompanyId(req.params.id)
+        .then((companyGuest) => {
+            res.render('guestView/guestLog', {companyGuest})
+        })
+})
 
 // create
 companyRouter.post('/company', (req, res) => {

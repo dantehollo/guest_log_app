@@ -1,6 +1,8 @@
 const express = require('express')
 const app = express()
 const methodOverride = require('method-override')
+const moment = require('moment');
+moment().format('llll');
 
 const { companyRouter } = require('./controllers/company.js')
 const { guestRouter } = require('./controllers/guest.js')

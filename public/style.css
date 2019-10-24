@@ -82,3 +82,25 @@ a {
     display: flex;
     justify-content: space-between;
 }
+
+.guest-title-bar {
+    display: flex;
+    justify-content: space-evenly; 
+}
+
+.sign-out-button {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin: 0 0 2px 0;
+}
+.button-container {
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.hide {
+    visibility: hidden;
+}

@@ -1,4 +1,4 @@
-<h1>{{singleCompany.companyName}}</h1>
+<h1 class="heading">{{singleCompany.companyName}}</h1>
 
 <p>{{singleCompany.companyAddress}}</p>
 <p>{{singleCompany.companyPhoneNumber}}</p>
@@ -13,15 +13,24 @@
     <input type="submit" value="Remove Company">
 </form>
 
-<a href="../guestView/guestLog.hbs">
+<a href="/company/{{singleCompany._id}}/guestList">
     <p>Guest List</p>
 </a>
 
-<h2>Registered Vendors</h2>
+<h3 class="center">Registered Vendors</h3>
 
 {{#each companyVendor}}
-    <h3>{{vendorName}}</h3>
+    <h4>{{vendorName}}</h4>
     <p>{{vendorAddress}}</p>
     <p>{{vendorPhoneNumber}}</p>
     <p>{{service}}</p>
+{{/each}}
+
+<h3 class="center">Guest Log</h3>
+
+{{#each companyGuest}}
+    <h4>{{guestName}}</h4>
+    <p>{{guestPhoneNumber}}</p>
+    <p>{{signIn}}</p>
+    <p>{{signOut}}</p>
 {{/each}}

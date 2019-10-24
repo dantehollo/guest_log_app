@@ -1,16 +1,17 @@
-<h1>{{singleGuest.guestName}}</h1>
+<h1 class="heading">{{singleGuest.guestName}}</h1>
+
+<div class="guest-title-bar">
+    <a href="/guest/edit/{{singleGuest._id}}">
+        <button>
+            Update
+        </button>
+    </a>
+    <form action="/guest/{{singleGuest._id}}?_method=DELETE" method="POST">
+        <input type="submit" value="Remove">
+    </form>
+</div>
 
 <p>Arrived at: {{singleGuest.signIn}}</p>
 <p>Left at: {{singleGuest.signOut}}</p>
 <p>Reason given: {{singleGuest.reasonForVisit}}</p>
 <p>Phone Number: {{singleGuest.guestPhoneNumber}}</p>
-
-<a href="/guest/edit/{{singleGuest._id}}">
-    <button>
-        Update
-    </button>
-</a>
-
-<form action="/guest/{{singleGuest._id}}?_method=DELETE" method="POST">
-    <input type="submit" value="Remove Visit">
-</form>

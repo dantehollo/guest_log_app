@@ -1,14 +1,14 @@
 const mongoose = require('./connection.js')
+// const moment = require('moment')
 
 // Schema
 const GuestSchema = new mongoose.Schema({
     guestName: String,
     guestPhoneNumber: String,
     reasonForVisit: String,
-    companyVisited: String,
     signIn: {
         type: Date,
-        default: Date.now
+        default: Date.now()
     },
     // signOut: {
     //     type: Date,

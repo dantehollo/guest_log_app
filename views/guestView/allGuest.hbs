@@ -12,7 +12,7 @@
     <h4>Name</h4>
     <h4>Sign In</h4>
     <h4>Sign Out</h4>
-    <button>
+    <button class="hide">
         <p>
             Sign Guest Out
         </p>
@@ -21,17 +21,19 @@
 
 <div class="container">
     {{#each allGuest}}
-        <a href="/guest/{{_id}}">
-            <div class="title-bar">
+        <div class="title-bar">
+            <a href="/guest/{{_id}}">
                 <p>{{guestName}}</p>
                 <p>{{signIn}}</p>
                 <p>{{signOut}}</p>
-                <button>
-                    <p>
-                        Sign Guest Out
-                    </p>
-                </button>
+            </a>
+            <div>
+            <button class="button-container">
+                <p class="sign-out-button">
+                    Sign Guest Out
+                </p>
+            </button>
             </div>
-        </a>
+        </div>
     {{/each}}
 </div>
