@@ -8,7 +8,7 @@ const GuestSchema = new mongoose.Schema({
     reasonForVisit: String,
     signIn: {
         type: Date,
-        default: Date.now()
+        default: Date.now
     },
     // signOut: {
     //     type: Date,
