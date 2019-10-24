@@ -43,10 +43,10 @@ companyRouter.get('/company/:id', (req, res) => {
 })
 
 // load guests onto guestLog
-companyRouter.get('/comapany/:id/guestLog', (req, res) => {
+companyRouter.get('/company/:id/guestLog', (req, res) => {
     guestApi.getAllGuestByCompanyId(req.params.id)
         .then((companyGuest) => {
-            res.render('guestView/guestLog', {companyGuest})
+            res.render('companyView/guestLog', {companyGuest})
         })
 })
 
