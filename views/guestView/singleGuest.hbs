@@ -1,14 +1,10 @@
 <h1>{{singleGuest.guestName}}</h1>
 
-<a href="../company">
-    <p>Home</p>
-</a>
-
-<p>Phone Number: {{singleGuest.guestPhoneNumber}}</p>
-<p><!--company the guest visited--></p>
+{{!-- company the visited --}}
 <p>Arrived at: {{singleGuest.signIn}}</p>
 <p>Left at: {{singleGuest.signOut}}</p>
 <p>For given: {{singleGuest.reasonForVisit}}</p>
+<p>Phone Number: {{singleGuest.guestPhoneNumber}}</p>
 
 <a href="/guest/edit/{{singleGuest._id}}">
     <button>

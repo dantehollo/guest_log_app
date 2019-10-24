@@ -10,7 +10,7 @@ nav {
     height: 100px;
 }
 
-a:link {
+a {
     text-decoration: none;
     color: black;
 }
@@ -28,10 +28,17 @@ a:link {
 }
 
 .nav-buttons {
-    height: 75px;
-    margin: 30px 5px; 
     display: flex;
     align-content: center;
+    border-left: 1px solid white;
+}
+
+.nav-text {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    height: 75px;
+    margin: 20px 5px;
 }
 
 .wrapper {
@@ -54,10 +61,19 @@ a:link {
     border: 1px solid black; 
     border-radius: 5px;
     margin: 20px 10px;
+    display: inline-block;
 }
 
 .container {
-    /* display: flex; */
-    /* justify-content: space-evenly; */
     width: 100%;
+}
+
+#nav-buttons-left {
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
 }

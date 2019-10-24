@@ -1,21 +1,19 @@
-<h1>Vendors</h1>
+<h1 class="heading">Vendors</h1>
 
-<a href="/company">
-    <p>Companies</p>
-</a>
-<a href="/guest">
-    <p>Guests</p>
-</a>
+<div class="container">
+    {{#each allVendor}}
+        <div class="box">
+            <a href="/vendor/{{_id}}">
+                <p>{{vendorName}}</p>
+            </a>
+        </div>
+    {{/each}}
+</div>
 
-<a href="/vendor/new">
-    <button>
-        Create New Vendor
-    </button>
-</a>
-
-{{#each allVendor}}
-    <a href="/vendor/{{_id}}">
-        <p>{{vendorName}}</p>
+<div class="center">
+    <a href="/vendor/new">
+        <button>
+            Create New Vendor
+        </button>
     </a>
-{{/each}}
-
+</div>
