@@ -7,33 +7,39 @@
         </button>
     </a>
 </div>
-
-<div class="title-bar">
-    <h4>Name</h4>
-    <h4>Sign In</h4>
-    <h4>Sign Out</h4>
-    <button class="hide">
-        <p>
-            Sign Guest Out
-        </p>
-    </button>
-</div>
-
-<div class="container">
+<table class="container">
+    <tr>
+        <td>
+            <h4 class="center">Name</h4>
+        </td>
+        <td>
+            <h4 class="center">Sign In</h4>
+        </td>
+        <td>
+            <h4 class="center">Sign Out</h4>
+        </td>
+    </tr>
     {{#each allGuest}}
-        <div class="title-bar">
-            <a href="/guest/{{_id}}">
-                <p>{{guestName}}</p>
-                <p>{{signIn}}</p>
-                <p>{{signOut}}</p>
-            </a>
-            <div>
-            <button class="button-container">
-                <p class="sign-out-button">
-                    Sign Guest Out
-                </p>
-            </button>
-            </div>
-        </div>
+        <a href="/guest/{{_id}}">
+            <tr>
+                <td>
+                   <p>{{guestName}}</p>
+                </td>
+                <td>
+                    <p>{{signIn}}</p>
+                </td>
+                <td>
+                    <p>{{signOut}}</p>
+                </td>
+                <td>
+                    <button class="button-container">
+                        <p class="sign-out-button">
+                            Sign Guest Out
+                        </p>
+                    </button>
+                </td>
+            </tr>
+        </a>
     {{/each}}
+</table>
 </div>

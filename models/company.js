@@ -5,6 +5,7 @@ const CompanySchema = mongoose.Schema({
     companyName: String,
     companyAddress: String,
     companyPhoneNumber: String,
+    companyImage: String,
     registeredVendors: String,
     guestLog: String
 })

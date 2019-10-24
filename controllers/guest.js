@@ -22,11 +22,21 @@ guestRouter.get('/guest/edit/:id', (req, res) => {
         })
 })
 
+// set signIn time
+guestRouter.get('/guest/new/:signIn', (req, res) => {
+    let time = signIn
+    let newTime = moment(timeToString).format('llll')
+    signIn = newTime
+    console.log(signIn)
+})
+
 // get all
 guestRouter.get('/guest', (req, res) => {
     guestApi.getAllGuest()
         .then((allGuest) => {
-            res.render('guestView/allGuest', {allGuest})
+
+            const formatedDate = moment(allGuest.signIn).format('llll')
+            res.render('guestView/allGuest', {allGuest, formatedDate})
         })
 })
 
@@ -34,7 +44,9 @@ guestRouter.get('/guest', (req, res) => {
 guestRouter.get('/guest/:id', (req, res) => {
     guestApi.getOneGuest(req.params.id)
         .then((singleGuest) => {
-            res.render('guestView/singleGuest', {singleGuest})
+    
+            const formatedDate = moment(singleGuest.signIn).format('llll')
+            res.render('guestView/singleGuest', {singleGuest, formatedDate})
         })
 }) 
 

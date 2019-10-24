@@ -1,9 +1,12 @@
 <h1 class="heading">{{singleCompany.companyName}}</h1>
-
-<p>{{singleCompany.companyAddress}}</p>
-<p>{{singleCompany.companyPhoneNumber}}</p>
-<p>{{singleCompany._id}}</p>
-
+<div class="info-box">
+    <img src="{{companyImage}}">
+    <div>
+        <p>{{singleCompany.companyAddress}}</p>
+        <p>{{singleCompany.companyPhoneNumber}}</p>
+        <p>{{singleCompany._id}}</p>
+    </div>
+</div>
 <a href="/company/edit/{{singleCompany._id}}">
     <button>
         Update
@@ -24,13 +27,4 @@
     <p>{{vendorAddress}}</p>
     <p>{{vendorPhoneNumber}}</p>
     <p>{{service}}</p>
-{{/each}}
-
-<h3 class="center">Guest Log</h3>
-
-{{#each companyGuest}}
-    <h4>{{guestName}}</h4>
-    <p>{{guestPhoneNumber}}</p>
-    <p>{{signIn}}</p>
-    <p>{{signOut}}</p>
 {{/each}}
