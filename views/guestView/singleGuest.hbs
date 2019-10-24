@@ -1,9 +1,8 @@
 <h1>{{singleGuest.guestName}}</h1>
 
-{{!-- company the visited --}}
 <p>Arrived at: {{singleGuest.signIn}}</p>
 <p>Left at: {{singleGuest.signOut}}</p>
-<p>For given: {{singleGuest.reasonForVisit}}</p>
+<p>Reason given: {{singleGuest.reasonForVisit}}</p>
 <p>Phone Number: {{singleGuest.guestPhoneNumber}}</p>
 
 <a href="/guest/edit/{{singleGuest._id}}">
@@ -15,9 +14,3 @@
 <form action="/guest/{{singleGuest._id}}?_method=DELETE" method="POST">
     <input type="submit" value="Remove Visit">
 </form>
-
-<a href="/guest">
-    <button>
-        Guest Log
-    </button>
-</a>

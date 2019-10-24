@@ -77,3 +77,8 @@ a {
     display: flex;
     justify-content: center;
 }
+
+.title-bar {
+    display: flex;
+    justify-content: space-between;
+}

@@ -1,20 +1,37 @@
-<h1>Guest Log</h1>
+<h1 class="heading">Guest Log</h1>
 
-<a href="/company">
-    <p>Companies</p>
-</a>
-<a href="/vendor">
-    <p>Vendors</p>
-</a>
-
-<a href="/guest/new">
-    <button>
-        Guest Sign In
-    </button>
-</a>
-
-{{#each allGuest}}
-    <a href="/guest/{{_id}}">
-        <p>{{guestName}}</p>
+<div class="center">
+    <a href="/guest/new">
+        <button>
+            Guest Sign In
+        </button>
     </a>
-{{/each}}
+</div>
+
+<div class="title-bar">
+    <h4>Name</h4>
+    <h4>Sign In</h4>
+    <h4>Sign Out</h4>
+    <button>
+        <p>
+            Sign Guest Out
+        </p>
+    </button>
+</div>
+
+<div class="container">
+    {{#each allGuest}}
+        <a href="/guest/{{_id}}">
+            <div class="title-bar">
+                <p>{{guestName}}</p>
+                <p>{{signIn}}</p>
+                <p>{{signOut}}</p>
+                <button>
+                    <p>
+                        Sign Guest Out
+                    </p>
+                </button>
+            </div>
+        </a>
+    {{/each}}
+</div>
