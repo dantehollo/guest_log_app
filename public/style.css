@@ -89,6 +89,12 @@ td {
     justify-content: center;
 }
 
+.center-box {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
 .title-bar {
     display: flex;
     justify-content: space-between;

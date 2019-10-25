@@ -4,8 +4,9 @@
     {{#each allCompany}}
         <div class="box">
             <a href="/company/{{_id}}">
-                <img src="{{companyImage}}" class="company-box-image">
-                <p>{{companyName}}</p>
+                <div class="center-box">
+                    <h4 class="center-box">{{companyName}}</h4>
+                </div>
             </a>
         </div>
     {{/each}}

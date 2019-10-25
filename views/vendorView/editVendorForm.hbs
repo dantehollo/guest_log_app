@@ -2,9 +2,10 @@
 
 <form action="/vendor/{{singleVendor._id}}?_method=PUT" method="POST">
     <input type="text" name="name" placeholder="Vendor" value="{{singleVendor.vendorName}}">
-    <input type="text" name="vendorLocation" placeholder="Address" value="{{singleVendor.vendorAddress}}">
+    <input type="text" name="vendorAddress" placeholder="Address" value="{{singleVendor.vendorAddress}}">
     <input type="text" name="vendorPhoneNumber" placeholder="Phone Number" value="{{singleVendor.vendorPhoneNumber}}">
     <input type="text" name="service" placeholder="Service" value="{{singleVendor.service}}">
+    <input type="text" name="companyId" placeholder="Company ID" value="{{companyId}}">
 
     <input type="submit" value="Submit">
 </form>

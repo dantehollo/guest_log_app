@@ -2,11 +2,13 @@
 
 <div class="container">
     {{#each allVendor}}
-        <a href="/vendor/{{_id}}">
-            <div class="box">
-                <p>{{vendorName}}</p>
-            </div>
-        </a>        
+        <div class="box">
+            <a href="/vendor/{{_id}}">
+                <div>
+                    <h4 class="center-box">{{vendorName}}</h4>
+                </div>
+            </a>
+        </div>        
     {{/each}}
 </div>
 
