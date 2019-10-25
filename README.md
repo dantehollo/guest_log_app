@@ -10,4 +10,4 @@ Trello Board:
 https://trello.com/b/mvG9OU8b/project-2
 
 Wireframes and ERD:
-![alt text](http://url/to/img.png)
+![alt text](https://git.generalassemb.ly/mcsei24/project-2/blob/master/readme-deliverables/IMG_20191025_085045547(1).jpg)
