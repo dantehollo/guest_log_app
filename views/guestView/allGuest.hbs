@@ -10,36 +10,25 @@
 <table class="container">
     <tr>
         <td>
-            <h4 class="center">Name</h4>
+            <h4 class="center">Guest Name</h4>
         </td>
         <td>
-            <h4 class="center">Sign In</h4>
-        </td>
-        <td>
-            <h4 class="center">Sign Out</h4>
+            <h4>Inspect Guest</h4>
         </td>
     </tr>
     {{#each allGuest}}
-        <a href="/guest/{{_id}}">
             <tr>
                 <td>
-                   <p>{{guestName}}</p>
+                   <p class="center">{{guestFirstName}} {{guestLastName}}</p>
                 </td>
                 <td>
-                    <p>{{signIn}}</p>
-                </td>
-                <td>
-                    <p>{{signOut}}</p>
-                </td>
-                <td>
-                    <button class="button-container">
-                        <p class="sign-out-button">
-                            Sign Guest Out
-                        </p>
-                    </button>
+                    <a href="/guest/{{_id}}">
+                        <button>
+                            <p>Check Guest</p>
+                        </button>
+                    </a>
                 </td>
             </tr>
-        </a>
     {{/each}}
 </table>
 </div>

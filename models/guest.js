@@ -3,7 +3,8 @@ const mongoose = require('./connection.js')
 
 // Schema
 const GuestSchema = new mongoose.Schema({
-    guestName: String,
+    guestFirstName: String,
+    guestLastName: String,
     guestPhoneNumber: String,
     reasonForVisit: String,
     signIn: {

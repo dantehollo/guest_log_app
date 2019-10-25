@@ -1,9 +1,10 @@
-<h1>Guest Log for {{singleCompany.companyName}}</h1>
+<h1 class="heading" >Guest Log</h1>
 
+<div>
 {{#each companyGuest}}
-    <h3>{{guestName}}</h3>
+    <h3>{{guestFirstName}} {{guestLastName}}</h3>
     <p>{{guestPhoneNumber}}</p>
     <p>{{reasonForVisit}}</p>
     <p>{{signIn}}</p>
-    <p>{{signOut}}</p>
 {{/each}}
+</div>

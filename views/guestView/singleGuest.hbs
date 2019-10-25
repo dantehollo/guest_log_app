@@ -1,4 +1,14 @@
-<h1 class="heading">{{singleGuest.guestName}}</h1>
+<h1 class="heading">{{singleGuest.guestFirstName}} {{singleGuest.guestLastName}}</h1>
+
+<div class="center">
+    <p>Arrived at: {{formatedDate}}</p>
+</div>
+<div class="center">
+    <p>Phone Number: {{singleGuest.guestPhoneNumber}}</p>
+</div>
+<div class="center">
+    <p>Reason given: {{singleGuest.reasonForVisit}}</p>
+</div>
 
 <div class="guest-title-bar">
     <a href="/guest/edit/{{singleGuest._id}}">
@@ -10,8 +20,3 @@
         <input type="submit" value="Remove">
     </form>
 </div>
-
-<p>Arrived at: {{formatedDate}}</p>
-<p>Left at: {{singleGuest.signOut}}</p>
-<p>Reason given: {{singleGuest.reasonForVisit}}</p>
-<p>Phone Number: {{singleGuest.guestPhoneNumber}}</p>

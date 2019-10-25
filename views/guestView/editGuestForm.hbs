@@ -1,7 +1,8 @@
 <h1>Guest Log Out</h1>
 
 <form action="/guest/{{singleGuest._id}}?_method=PUT" method="POST">
-    <input type="text" name="guestName" placeholder="Guest Name" value="{{singleGuest.guestName}}">
+    <input type="text" name="guestFirstName" placeholder="Guest First Name" value="{{singleGuest.guestFirstName}}">
+    <input type="text" name="guestLastName" placeholder="Guest Last Name" value="{{singleGuest.guestLastName}}">
     <input type="text" name="guestPhoneNumber" placeholder="Phone Number" value="{{singleGuest.guestPhoneNumber}}">
     <input type="text" name="reasonForVisit" placeholder="Reason For Visit" value="{{singleGuest.reasonForVisit}}">
     <input type="text" name="companyVisited" placeholder="Place Visited" value="{{singleGuest.companyVisited}}">
