@@ -150,3 +150,7 @@ td {
 .move-button {
     padding-right: 0px;
 }
+
+.margin-sides {
+    margin: 15px 10px;
+}
