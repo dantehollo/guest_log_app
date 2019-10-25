@@ -67,12 +67,23 @@ td {
 }
 
 .box {
-    width: 25%;
+    width: 20%;
     height: 200px;
     border: 1px solid black; 
     border-radius: 5px;
-    margin: 20px 10px;
+    margin: 20px;
     display: inline-block;
+}
+
+.box-details {
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.box-heading {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin: 50px 0 20px 0;
 }
 
 .container {
@@ -129,4 +140,13 @@ td {
 
 .block {
     display: block;
+}
+.table-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.move-button {
+    padding-right: 0px;
 }
