@@ -1,30 +1,44 @@
 <h1 class="heading">{{singleCompany.companyName}}</h1>
-<div class="info-box">
-    <img src="{{companyImage}}">
-    <div>
-        <p>{{singleCompany.companyAddress}}</p>
-        <p>{{singleCompany.companyPhoneNumber}}</p>
-        <p>{{singleCompany._id}}</p>
-    </div>
-</div>
-<a href="/company/edit/{{singleCompany._id}}">
-    <button>
-        Update
-    </button>
-</a>
-<form action="/company/{{singleCompany._id}}?_method=DELETE" method="POST">
-    <input type="submit" value="Remove Company">
-</form>
 
-<a href="/company/{{singleCompany._id}}/guestLog">
-    <p>Guest List</p>
-</a>
+<div class="center">
+    <p>Address: {{singleCompany.companyAddress}}</p>
+</div>
+<div class="center">
+    <p>Phone Number: {{singleCompany.companyPhoneNumber}}</p>
+</div>
+<div class="center">
+    <p>ID: {{singleCompany._id}}</p>
+</div>
+
+<div class="guest-title-bar">
+    <a href="/company/{{singleCompany._id}}/guestLog">
+        <button>
+            Guest List
+        </button>
+    </a>
+    <form action="/company/{{singleCompany._id}}?_method=DELETE" method="POST">
+        <input type="submit" value="Remove Company">
+    </form>
+    <a href="/company/edit/{{singleCompany._id}}">
+        <button>
+            Update
+        </button>
+    </a>
+</div>
 
 <h3 class="center">Registered Vendors</h3>
 
 {{#each companyVendor}}
-    <h4>{{vendorName}}</h4>
-    <p>{{vendorAddress}}</p>
-    <p>{{vendorPhoneNumber}}</p>
-    <p>{{service}}</p>
+    <div class="center">
+        <h4>{{vendorName}}</h4>
+    </div>
+    <div class="center">
+        <p>{{vendorAddress}}</p>
+    </div>
+    <div class="center">
+        <p>{{vendorPhoneNumber}}</p>
+    </div>
+    <div class="center">
+        <p>{{service}}</p>
+    </div>
 {{/each}}

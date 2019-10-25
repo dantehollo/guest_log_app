@@ -1,9 +1,16 @@
 <h1 class="center">{{singleVendor.vendorName}}</h1>
 
-<p>Address: {{singleVendor.vendorAddress}}</p>
-<p>Phone Number: {{singleVendor.vendorPhoneNumber}}</p>
-<p>Service Provided: {{singleVendor.service}}</p>
+<div class="center">
+    <p>Address: {{singleVendor.vendorAddress}}</p>
+</div>
+<div class="center">
+    <p>Phone Number: {{singleVendor.vendorPhoneNumber}}</p>
+</div>
+<div class="center">
+    <p>Service Provided: {{singleVendor.service}}</p>
+</div>
 
+<div class="guest-title-bar">
 <a href="/vendor/edit/{{singleVendor._id}}">
     <button>
         Update
@@ -13,27 +20,4 @@
 <form action="/vendor/{{singleVendor._id}}?_method=DELETE" method="POST">
     <input type="submit" value="Remove Visit">
 </form>
-
-
-<h1 class="heading">{{singleGuest.guestFirstName}} {{singleGuest.guestLastName}}</h1>
-
-<div class="center">
-    <p>Arrived at: {{formatedDate}}</p>
-</div>
-<div class="center">
-    <p>Phone Number: {{singleGuest.guestPhoneNumber}}</p>
-</div>
-<div class="center">
-    <p>Reason given: {{singleGuest.reasonForVisit}}</p>
-</div>
-
-<div class="guest-title-bar">
-    <a href="/guest/edit/{{singleGuest._id}}">
-        <button>
-            Update
-        </button>
-    </a>
-    <form action="/guest/{{singleGuest._id}}?_method=DELETE" method="POST">
-        <input type="submit" value="Remove">
-    </form>
 </div>

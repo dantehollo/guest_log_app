@@ -97,6 +97,7 @@ td {
 .guest-title-bar {
     display: flex;
     justify-content: space-evenly; 
+    margin: 25px 0 50px 0;
 }
 
 .sign-out-button {
